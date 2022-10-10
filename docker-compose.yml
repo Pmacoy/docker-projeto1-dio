@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  web:
+    image: httpd:latest
+    container_name: apache-app-1
+    ports:
+      - "8080:8080"
+    volumes:
+      - /data/apache/:/usr/local/apache2/htdocs
+    networks:
+      - rede-apache
